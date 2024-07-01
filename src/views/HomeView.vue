@@ -12,9 +12,13 @@ import axios from 'axios';
 
 import { useToastStore } from '@/stores/toastStore';
 
+// Stores
+const toastStore = useToastStore();
 
+// States
 const file = ref<File | null>(null)
 
+// Methods
 const handleFileUpload = (event: Event) => {
   const target = event.target as HTMLInputElement
   if (target.files && target.files.length > 0) {
@@ -24,7 +28,7 @@ const handleFileUpload = (event: Event) => {
 
 const submitFile = async () => {
   if (!file.value) {
-    alert('Please upload an EPUB file first')
+    toastStore.message('error','Please select a file to upload');
     return
   }
 

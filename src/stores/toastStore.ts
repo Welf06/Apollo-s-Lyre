@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-export const useToastStore = defineStore('utils', () => {
+export const useToastStore = defineStore('toast', () => {
     const showAlert = ref<boolean>(false);
     const alertColor = ref<string>('');
     const alertText = ref<string>('');
