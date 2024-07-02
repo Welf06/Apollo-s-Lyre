@@ -5,41 +5,44 @@
         <div class="w-1/4">
             <v-file-input 
                 v-model="file" 
-                label="Add File" 
+                label="Add an ePub" 
                 variant="underlined"
                 accept=".epub"
             </v-file-input>
         </div>
         <button @click="submitFile" class="px-6 py-2 bg-blue text-white rounded-lg">Submit</button>
-        <v-icon size="60" class="absolute bottom-0 m-auto text-blue">mdi-arrow-down</v-icon>
+        <v-icon size="60" class="absolute bottom-10 m-auto text-blue">mdi-arrow-down</v-icon>
     </div>
 
     <!-- How it works -->
     <div class="min-h-[50vh] flex flex-col justify-center items-center">
         <span class="text-3xl font-bold">How It Works</span>
 
-        <ul class="mt-8 flex gap-16">
-            <li class="w-50 flex flex-col justify-top items-center">
+        <ul class="mt-16 flex gap-16">
+            <li class="w-50 flex flex-col  gap-4 justify-top items-center">
+                <v-icon size="60" class="text-blue">mdi-upload</v-icon>
                 <span class="text-2xl font-semibold">
                     1. Upload
                 </span>
-                <span class="mt-2 text-center">
+                <span class="text-center">
                     Select and upload your ePub file
                 </span>
             </li>
-            <li class="w-50 flex flex-col justify-top items-center">
+            <li class="w-50 flex flex-col gap-4 justify-top items-center">
+                <v-icon size="60" class="text-blue">mdi-chart-areaspline</v-icon>
                 <span class="text-2xl font-semibold">
                     2. Analyze
                 </span>
-                <span class="mt-2 text-center">
+                <span class="text-center">
                     We analyze your book's content
                 </span>
             </li>
-            <li class="w-50 flex flex-col justify-top items-center">
+            <li class="w-50 flex flex-col gap-4 justify-top items-center">
+                <v-icon size="60" class="text-blue">mdi-playlist-music</v-icon>
                 <span class="text-2xl font-semibold">
                     3. Curate
                 </span>
-                <span class="mt-2 text-center">
+                <span class="text-center">
                     Get personalized playlists for each chapter
                 </span>
             </li>
