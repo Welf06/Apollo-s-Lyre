@@ -59,12 +59,16 @@ const props = withDefaults(
     }
 );
 
+// States
+const selectedMenu = ref(route.path);
+
 /**
  * Function to change and emit selected menu items
  * @param menu Selected Menu
  * @param id Selected Menu ID
  */
  function changeSelectedMenu(menu: string, id: string): void {
+    selectedMenu.value = id;
     router.push(menu);
 
     return;

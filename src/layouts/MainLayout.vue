@@ -31,7 +31,7 @@ import { useToastStore } from '@/stores/toastStore';
 // Stores
 const toastStore = useToastStore();
 
-const menus = [
+const menus: object[] = [
     // {
     //     id: 'insights',
     //     label: 'Insights',
