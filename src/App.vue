@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <v-app class="bg-gray-200">
         <router-view></router-view>
         <v-snackbar id="alert-snackbar" v-model="toastStore.showAlert" :color="toastStore.alertColor" :timeout="3000"
             variant="flat">
