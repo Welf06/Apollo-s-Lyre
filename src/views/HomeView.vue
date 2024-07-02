@@ -47,7 +47,7 @@
     </div>
 
     <!-- Copyright -->
-    <footer class="mt-24 flex justify-center items-center gap-2">
+    <footer class="mt-24 mb-2 flex justify-center items-center gap-2">
         <v-icon size="24" class="text-blue">mdi-copyright</v-icon>
         <span class="">Apollo's Lyre</span>
     </footer>
@@ -56,9 +56,13 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import axios from 'axios';
 
 import { useToastStore } from '@/stores/toastStore';
+
+const router = useRouter();
+const route = useRoute();
 
 // Stores
 const toastStore = useToastStore();
@@ -73,19 +77,21 @@ const submitFile = async () => {
         return
     }
 
-    const formData = new FormData()
-    formData.append('file', file.value)
+    router.push('/results/:id');
 
-    try {
-        const response = await axios.post('YOUR_API_ENDPOINT', formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        })
-        console.log('File uploaded successfully', response.data)
-    } catch (error) {
-        console.error('Error uploading file', error)
-    }
+    // const formData = new FormData()
+    // formData.append('file', file.value)
+
+    // try {
+    //     const response = await axios.post('YOUR_API_ENDPOINT', formData, {
+    //         headers: {
+    //             'Content-Type': 'multipart/form-data'
+    //         }
+    //     })
+    //     console.log('File uploaded successfully', response.data)
+    // } catch (error) {
+    //     console.error('Error uploading file', error)
+    // }
 }
 </script>
 
