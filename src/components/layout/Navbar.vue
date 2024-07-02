@@ -65,9 +65,7 @@ const props = withDefaults(
  * @param id Selected Menu ID
  */
  function changeSelectedMenu(menu: string, id: string): void {
-    selectedMenu.value = id;
     router.push(menu);
-    drawer.value = false;
 
     return;
 }
