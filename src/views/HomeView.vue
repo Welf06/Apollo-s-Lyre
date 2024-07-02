@@ -15,16 +15,44 @@
     </div>
 
     <!-- How it works -->
-    <div class="mt-8 flex flex-col justify-center items-center">
+    <div class="min-h-[50vh] flex flex-col justify-center items-center">
         <span class="text-3xl font-bold">How It Works</span>
 
-        <ul class="mt-4 flex">
-            <li class="text-2xl font-semibold">1. Upload</li>
-            <li>2. Analyze</li>
-            <li>3. Curate</li>
+        <ul class="mt-8 flex gap-16">
+            <li class="w-50 flex flex-col justify-top items-center">
+                <span class="text-2xl font-semibold">
+                    1. Upload
+                </span>
+                <span class="mt-2 text-center">
+                    Select and upload your ePub file
+                </span>
+            </li>
+            <li class="w-50 flex flex-col justify-top items-center">
+                <span class="text-2xl font-semibold">
+                    2. Analyze
+                </span>
+                <span class="mt-2 text-center">
+                    We analyze your book's content
+                </span>
+            </li>
+            <li class="w-50 flex flex-col justify-top items-center">
+                <span class="text-2xl font-semibold">
+                    3. Curate
+                </span>
+                <span class="mt-2 text-center">
+                    Get personalized playlists for each chapter
+                </span>
+            </li>
         </ul>
     </div>
+
+    <!-- Copyright -->
+    <footer class="mt-24 flex justify-center items-center gap-2">
+        <v-icon size="24" class="text-blue">mdi-copyright</v-icon>
+        <span class="">Apollo's Lyre</span>
+    </footer>
 </template>
+
 
 <script setup lang="ts">
 import { ref } from 'vue';
