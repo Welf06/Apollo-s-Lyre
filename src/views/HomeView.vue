@@ -13,7 +13,7 @@
         <button @click="submitFile" class="px-6 py-2 bg-blue text-white rounded-lg">Submit</button>
         <v-icon size="60" class="absolute bottom-10 m-auto text-blue">mdi-arrow-down</v-icon>
     </div>
-
+ 
     <!-- How it works -->
     <div class="min-h-[50vh] flex flex-col justify-center items-center">
         <span class="text-3xl font-bold">How It Works</span>
