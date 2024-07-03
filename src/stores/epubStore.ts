@@ -11,7 +11,7 @@ export const useEpubStore = defineStore('epub', () => {
     // States
 
     // Methods
-    async function uploadEpubFile(file) {
+    async function uploadEpubFile(file: File) {
         try {
             const formData = new FormData();
             formData.append('file', file);

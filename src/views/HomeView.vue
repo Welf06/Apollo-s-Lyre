@@ -87,12 +87,13 @@ const submitFile = async () => {
 
         // const { task_id, unique_file_name } = res;
 
-        console.log('File uploaded successfully', res);
+        // console.log('File uploaded successfully', res);
+
+        router.push('/results/:id');
+
     } catch (error) {
         console.error('Error uploading file', error)
     }
-
-    router.push('/results/:id');
 }
 </script>
 
