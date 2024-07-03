@@ -48,13 +48,16 @@
                     <v-icon size="100" class="text-blue">mdi-book-multiple</v-icon>
                     <span class="text-2xl font-semibold mt-2">Results</span>
                     <span class="text-center mt-2">Here are the results for the book</span>
-                    <div v-for="(result, id) in results" :key="id" class="mt-8 flex flex-col gap-4 w-full max-w-2xl">
+                    <div v-for="(result, id) in results" :key="id" class="mt-16 flex flex-col items-center gap-4 w-full max-w-2xl">
                         <span class="text-lg font-semibold">{{ result.name }}</span>
                         <iframe :src="getEmbedUrl(result.playlist)" width="100%" height="380" frameborder="0"
                             allowtransparency="true" allow="encrypted-media"></iframe>
-                        <v-btn color="primary" @click="redirectToPlaylist(result.playlist)">
-                            Open in Spotify
+
+                            <v-btn color="#1DB954" class="w-1/2 flex items-center justify-center" @click="redirectToPlaylist(result.playlist)">
+                                <v-icon size="24" class="mr-2" left>mdi-spotify</v-icon>
+                                Open in Spotify
                         </v-btn>
+                        <hr class="w-full border border-gray-200 mt-4">
                     </div>
                 </div>
             </template>
@@ -85,15 +88,19 @@ const results = ref([
         playlist: "spotify:playlist:4p3D834U8NjfUozgjjRZmc?si=65c3f11053ab4161"
     },
     {
-        name: "Chapter 2 - Alexei Fyodorovich Karamazov",
+        name: "Chapter 2 - The First Son Sent Packing",
         playlist: "spotify:playlist:4p3D834U8NjfUozgjjRZmc?si=65c3f11053ab4161"
     },
     {
-        name: "Chapter 3 - Ivan Fyodorovich Karamazov",
+        name: "Chapter 3 - Second Marriage, Second Children",
         playlist: "spotify:playlist:4p3D834U8NjfUozgjjRZmc?si=65c3f11053ab4161"
     },
     {
-        name: "Chapter 4 - Dmitri Fyodorovich Karamazov",
+        name: "Chapter 4 - The Third Son, Alyosha",
+        playlist: "spotify:playlist:18zwlTqUMXYPGRrN439zvj?si=4e03623b11d14579"
+    },
+    {
+        name: "Chapter 5 - Elders",
         playlist: "spotify:playlist:4p3D834U8NjfUozgjjRZmc?si=65c3f11053ab4161"
     }
 ]);
