@@ -15,9 +15,8 @@ export const useEpubStore = defineStore('epub', () => {
         try {
             const formData = new FormData();
             formData.append('file', file);
-
             const { data, status } = await axios.post(
-                `${process.env.API_URL}/upload`,
+                `${import.meta.env.API_URL}/upload`,
                 formData,
                 {
                     headers: {
