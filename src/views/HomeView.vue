@@ -63,15 +63,17 @@ import { useRoute, useRouter } from 'vue-router';
 import axios from 'axios';
 
 import { useToastStore } from '@/stores/toastStore';
+import { useEpubStore } from '@/stores/epubStore';
 
 const router = useRouter();
 const route = useRoute();
 
 // Stores
 const toastStore = useToastStore();
+const epubStore = useEpubStore();
 
 // States
-const file = ref<File | null>(null)
+const file = ref<File | null>(null);
 
 // Methods
 const submitFile = async () => {
@@ -80,21 +82,17 @@ const submitFile = async () => {
         return
     }
 
+    try {
+        // const res = await epubStore.uploadEpubFile(file.value);
+
+        // const { task_id, unique_file_name } = res;
+
+        console.log('File uploaded successfully', res);
+    } catch (error) {
+        console.error('Error uploading file', error)
+    }
+
     router.push('/results/:id');
-
-    // const formData = new FormData()
-    // formData.append('file', file.value)
-
-    // try {
-    //     const response = await axios.post('YOUR_API_ENDPOINT', formData, {
-    //         headers: {
-    //             'Content-Type': 'multipart/form-data'
-    //         }
-    //     })
-    //     console.log('File uploaded successfully', response.data)
-    // } catch (error) {
-    //     console.error('Error uploading file', error)
-    // }
 }
 </script>
 
