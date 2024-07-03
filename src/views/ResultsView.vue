@@ -150,6 +150,8 @@ function refreshJobDetails() {
         if (res.state === 'SUCCESS') {
             clearInterval(pollingInterval.value);
             state.value = 'SUCCESS';
+
+            // API call: Get Results
         }
         if (res.state === 'FAILURE') {
             clearInterval(pollingInterval.value);
